@@ -1,0 +1,776 @@
+//
+// Copyright (c) 2014-present, Facebook, Inc.
+// All rights reserved.
+//
+// This source code is licensed under the University of Illinois/NCSA Open
+// Source License found in the LICENSE file in the root directory of this
+// source tree. An additional grant of patent rights can be found in the
+// PATENTS file in the same directory.
+//
+{
+    "namespace" : "ARM64",
+    "register-sets" : {
+        "gpr" : {
+            "*" : {
+                //
+                // Common to all registers
+                //
+                "bit-size"              : 64,
+                "encoding"              : "int",
+                "format"                : "hex",
+
+                "base-gdb-reg-number"       : 0,
+                "base-ehframe-reg-number"   : 0,
+                "base-dwarf-reg-number"     : 0,
+
+                "referencing-sets"      : [ "pseudo-gpr32" ]
+            },
+
+            "x0"  : {
+                "alternate-name"       : "arg1",
+                "generic-name"         : "arg1",
+                "invalidate-registers" : [ "w0" ]
+            },
+            "x1"  : {
+                "alternate-name"       : "arg2",
+                "generic-name"         : "arg2",
+                "invalidate-registers" : [ "w1" ]
+            },
+            "x2"  : {
+                "alternate-name"       : "arg3",
+                "generic-name"         : "arg3",
+                "invalidate-registers" : [ "w2" ]
+            },
+            "x3"  : {
+                "alternate-name"       : "arg4",
+                "generic-name"         : "arg4",
+                "invalidate-registers" : [ "w3" ]
+            },
+            "x4"  : {
+                "invalidate-registers" : [ "w4" ]
+            },
+            "x5"  : {
+                "invalidate-registers" : [ "w5" ]
+            },
+            "x6"  : {
+                "invalidate-registers" : [ "w6" ]
+            },
+            "x7"  : {
+                "invalidate-registers" : [ "w7" ]
+            },
+            "x8"  : {
+                "invalidate-registers" : [ "w8" ]
+            },
+            "x9"  : {
+                "invalidate-registers" : [ "w9" ]
+            },
+            "x10" : {
+                "invalidate-registers" : [ "w10" ]
+            },
+            "x11" : {
+                "invalidate-registers" : [ "w11" ]
+            },
+            "x12" : {
+                "invalidate-registers" : [ "w12" ]
+            },
+            "x13" : {
+                "invalidate-registers" : [ "w13" ]
+            },
+            "x14" : {
+                "invalidate-registers" : [ "w14" ]
+            },
+            "x15" : {
+                "invalidate-registers" : [ "w15" ]
+            },
+            "x16" : {
+                "alternate-name"       : "ip0",
+                "generic-name"         : "ip0",
+                "invalidate-registers" : [ "w16" ]
+            },
+            "x17" : {
+                "alternate-name"       : "ip1",
+                "generic-name"         : "ip1",
+                "invalidate-registers" : [ "w17" ]
+            },
+            "x18" : {
+                "invalidate-registers" : [ "w18" ]
+            },
+            "x19" : {
+                "invalidate-registers" : [ "w19" ]
+            },
+            "x20" : {
+                "invalidate-registers" : [ "w20" ]
+            },
+            "x21" : {
+                "invalidate-registers" : [ "w21" ]
+            },
+            "x22" : {
+                "invalidate-registers" : [ "w22" ]
+            },
+            "x23" : {
+                "invalidate-registers" : [ "w23" ]
+            },
+            "x24" : {
+                "invalidate-registers" : [ "w24" ]
+            },
+            "x25" : {
+                "invalidate-registers" : [ "w25" ]
+            },
+            "x26" : {
+                "invalidate-registers" : [ "w26" ]
+            },
+            "x27" : {
+                "invalidate-registers" : [ "w27" ]
+            },
+            "x28" : {
+                "invalidate-registers" : [ "w28" ]
+            },
+            "x29" : {
+                "gdb-encoding"         : "data-pointer",
+                "alternate-name"       : "fp",
+                "generic-name"         : "fp",
+                "invalidate-registers" : [ "w29" ]
+            },
+            "x30" : {
+                "gdb-encoding"         : "code-pointer",
+                "alternate-name"       : "lr",
+                "generic-name"         : "lr",
+                "invalidate-registers" : [ "w30" ]
+            },
+            "sp" : {
+                "gdb-encoding"         : "data-pointer",
+                "alternate-name"       : "sp",
+                "generic-name"         : "sp"
+            },
+            "pc" : {
+                "gdb-encoding"         : "code-pointer",
+                "generic-name"         : "pc"
+            }
+        },
+
+        "pseudo-gpr32" : {
+            "*" : {
+                "private"               : true,
+                "bit-size"              : 32,
+                "encoding"              : "int",
+                "format"                : "hex",
+
+                "base-gdb-reg-number"       : 0,
+                "base-ehframe-reg-number"   : 0,
+                "base-dwarf-reg-number"     : 0,
+
+                "referencing-sets"      : [ "gpr" ]
+            },
+
+            "w0"  : {
+                "container-registers"  : [ "x0" ],
+                "invalidate-registers" : [ "x0" ]
+            },
+            "w1"  : {
+                "container-registers"  : [ "x1" ],
+                "invalidate-registers" : [ "x1" ]
+            },
+            "w2"  : {
+                "container-registers"  : [ "x2" ],
+                "invalidate-registers" : [ "x2" ]
+            },
+            "w3"  : {
+                "container-registers"  : [ "x3" ],
+                "invalidate-registers" : [ "x3" ]
+            },
+            "w4"  : {
+                "container-registers"  : [ "x4" ],
+                "invalidate-registers" : [ "x4" ]
+            },
+            "w5"  : {
+                "container-registers"  : [ "x5" ],
+                "invalidate-registers" : [ "x5" ]
+            },
+            "w6"  : {
+                "container-registers"  : [ "x6" ],
+                "invalidate-registers" : [ "x6" ]
+            },
+            "w7"  : {
+                "container-registers"  : [ "x7" ],
+                "invalidate-registers" : [ "x7" ]
+            },
+            "w8"  : {
+                "container-registers"  : [ "x8" ],
+                "invalidate-registers" : [ "x8" ]
+            },
+            "w9"  : {
+                "container-registers"  : [ "x9" ],
+                "invalidate-registers" : [ "x9" ]
+            },
+            "w10" : {
+                "container-registers"  : [ "x10" ],
+                "invalidate-registers" : [ "x10" ]
+            },
+            "w11" : {
+                "container-registers"  : [ "x11" ],
+                "invalidate-registers" : [ "x11" ]
+            },
+            "w12" : {
+                "container-registers"  : [ "x12" ],
+                "invalidate-registers" : [ "x12" ]
+            },
+            "w13" : {
+                "container-registers"  : [ "x13" ],
+                "invalidate-registers" : [ "x13" ]
+            },
+            "w14" : {
+                "container-registers"  : [ "x14" ],
+                "invalidate-registers" : [ "x14" ]
+            },
+            "w15" : {
+                "container-registers"  : [ "x15" ],
+                "invalidate-registers" : [ "x15" ]
+            },
+            "w16" : {
+                "container-registers"  : [ "x16" ],
+                "invalidate-registers" : [ "x16" ]
+            },
+            "w17" : {
+                "container-registers"  : [ "x17" ],
+                "invalidate-registers" : [ "x17" ]
+            },
+            "w18" : {
+                "container-registers"  : [ "x18" ],
+                "invalidate-registers" : [ "x18" ]
+            },
+            "w19" : {
+                "container-registers"  : [ "x19" ],
+                "invalidate-registers" : [ "x19" ]
+            },
+            "w20" : {
+                "container-registers"  : [ "x20" ],
+                "invalidate-registers" : [ "x20" ]
+            },
+            "w21" : {
+                "container-registers"  : [ "x21" ],
+                "invalidate-registers" : [ "x21" ]
+            },
+            "w22" : {
+                "container-registers"  : [ "x22" ],
+                "invalidate-registers" : [ "x22" ]
+            },
+            "w23" : {
+                "container-registers"  : [ "x23" ],
+                "invalidate-registers" : [ "x23" ]
+            },
+            "w24" : {
+                "container-registers"  : [ "x24" ],
+                "invalidate-registers" : [ "x24" ]
+            },
+            "w25" : {
+                "container-registers"  : [ "x25" ],
+                "invalidate-registers" : [ "x25" ]
+            },
+            "w26" : {
+                "container-registers"  : [ "x26" ],
+                "invalidate-registers" : [ "x26" ]
+            },
+            "w27" : {
+                "container-registers"  : [ "x27" ],
+                "invalidate-registers" : [ "x27" ]
+            },
+            "w28" : {
+                "container-registers"  : [ "x28" ],
+                "invalidate-registers" : [ "x28" ]
+            },
+            "w29" : {
+                "container-registers"  : [ "x29" ],
+                "invalidate-registers" : [ "x29" ]
+            },
+            "w30" : {
+                "container-registers"  : [ "x30" ],
+                "invalidate-registers" : [ "x30" ]
+            }
+        },
+
+        "cpsr" : {
+            "cpsr" : {
+                "bit-size"             : 64,
+                "encoding"             : "int",
+                "gdb-encoding"         : "int",
+                "format"               : "hex",
+                "alternate-name"       : "flags",
+                "generic-name"         : "flags",
+                "gdb-reg-number"       : 25,
+                "ehframe-reg-number"   : 33,
+                "dwarf-reg-number"     : 33,
+                "invalidate-registers" : [ "x8", "x9", "x10", "x11", "x12", "x13", "x14" ],
+                "referencing-sets"     : [ "gpr" ]
+            }
+        }
+
+//        "vfp-single" : {
+//            "*" : {
+//                //
+//                // Common to all registers
+//                //
+//                "bit-size"              : 32,
+//                "encoding"              : "ieee-single",
+//                "format"                : "vector",
+//
+//                "base-gdb-reg-number"   : 26,
+//                "base-dwarf-reg-number" : 64,
+//
+//                "parent-set"            : "vfp-quad",
+//                "referencing-sets"      : [ "vfp-quad", "vfp-double" ]
+//            },
+//
+//            "s0"  : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q0" ],
+//                "invalidate-registers" : [ "q0", "d0", "d1", "s0", "s1", "s2", "s3" ]
+//            },
+//            "s1"  : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q0" ],
+//                "invalidate-registers" : [ "q0", "d0", "d1", "s0", "s1", "s2", "s3" ]
+//            },
+//            "s2"  : {
+//                "parent-element"       : 2,
+//                "container-registers"  : [ "q0" ],
+//                "invalidate-registers" : [ "q0", "d0", "d1", "s0", "s1", "s2", "s3" ]
+//            },
+//            "s3"  : {
+//                "parent-element"       : 3,
+//                "container-registers"  : [ "q0" ],
+//                "invalidate-registers" : [ "q0", "d0", "d1", "s0", "s1", "s2", "s3" ]
+//            },
+//            "s4"  : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q1" ],
+//                "invalidate-registers" : [ "q1", "d2", "d3", "s4", "s5", "s6", "s7" ]
+//            },
+//            "s5"  : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q1" ],
+//                "invalidate-registers" : [ "q1", "d2", "d3", "s4", "s5", "s6", "s7" ]
+//            },
+//            "s6"  : {
+//                "parent-element"       : 2,
+//                "container-registers"  : [ "q1" ],
+//                "invalidate-registers" : [ "q1", "d2", "d3", "s4", "s5", "s6", "s7" ]
+//            },
+//            "s7"  : {
+//                "parent-element"       : 3,
+//                "container-registers"  : [ "q1" ],
+//                "invalidate-registers" : [ "q1", "d2", "d3", "s4", "s5", "s6", "s7" ]
+//            },
+//            "s8"  : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q2" ],
+//                "invalidate-registers" : [ "q2", "d4", "d5", "s8", "s9", "s10", "s11" ]
+//            },
+//            "s9"  : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q2" ],
+//                "invalidate-registers" : [ "q2", "d4", "d5", "s8", "s9", "s10", "s11" ]
+//            },
+//            "s10" : {
+//                "parent-element"       : 2,
+//                "container-registers"  : [ "q2" ],
+//                "invalidate-registers" : [ "q2", "d4", "d5", "s8", "s9", "s10", "s11" ]
+//            },
+//            "s11" : {
+//                "parent-element"       : 3,
+//                "container-registers"  : [ "q2" ],
+//                "invalidate-registers" : [ "q2", "d4", "d5", "s8", "s9", "s10", "s11" ]
+//            },
+//            "s12" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q3" ],
+//                "invalidate-registers" : [ "q3", "d6", "d7", "s12", "s13", "s14", "s15" ]
+//            },
+//            "s13" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q3" ],
+//                "invalidate-registers" : [ "q3", "d6", "d7", "s12", "s13", "s14", "s15" ]
+//            },
+//            "s14" : {
+//                "parent-element"       : 2,
+//                "container-registers"  : [ "q3" ],
+//                "invalidate-registers" : [ "q3", "d6", "d7", "s12", "s13", "s14", "s15" ]
+//            },
+//            "s15" : {
+//                "parent-element"       : 3,
+//                "container-registers"  : [ "q3" ],
+//                "invalidate-registers" : [ "q3", "d6", "d7", "s12", "s13", "s14", "s15" ]
+//            },
+//            "s16" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q4" ],
+//                "invalidate-registers" : [ "q4", "d8", "d9", "s16", "s17", "s18", "s19" ]
+//            },
+//            "s17" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q4" ],
+//                "invalidate-registers" : [ "q4", "d8", "d9", "s16", "s17", "s18", "s19" ]
+//            },
+//            "s18" : {
+//                "parent-element"       : 2,
+//                "container-registers"  : [ "q4" ],
+//                "invalidate-registers" : [ "q4", "d8", "d9", "s16", "s17", "s18", "s19" ]
+//            },
+//            "s19" : {
+//                "parent-element"       : 3,
+//                "container-registers"  : [ "q4" ],
+//                "invalidate-registers" : [ "q4", "d8", "d9", "s16", "s17", "s18", "s19" ]
+//            },
+//            "s20" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q5" ],
+//                "invalidate-registers" : [ "q5", "d10", "d11", "s20", "s21", "s22", "s23" ]
+//            },
+//            "s21" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q5" ],
+//                "invalidate-registers" : [ "q5", "d10", "d11", "s20", "s21", "s22", "s23" ]
+//            },
+//            "s22" : {
+//                "parent-element"       : 2,
+//                "container-registers"  : [ "q5" ],
+//                "invalidate-registers" : [ "q5", "d10", "d11", "s20", "s21", "s22", "s23" ]
+//            },
+//            "s23" : {
+//                "parent-element"       : 3,
+//                "container-registers"  : [ "q5" ],
+//                "invalidate-registers" : [ "q5", "d10", "d11", "s20", "s21", "s22", "s23" ]
+//            },
+//            "s24" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q6" ],
+//                "invalidate-registers" : [ "q6", "d12", "d13", "s24", "s25", "s26", "s27" ]
+//            },
+//            "s25" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q6" ],
+//                "invalidate-registers" : [ "q6", "d12", "d13", "s24", "s25", "s26", "s27" ]
+//            },
+//            "s26" : {
+//                "parent-element"       : 2,
+//                "container-registers"  : [ "q6" ],
+//                "invalidate-registers" : [ "q6", "d12", "d13", "s24", "s25", "s26", "s27" ]
+//            },
+//            "s27" : {
+//                "parent-element"       : 3,
+//                "container-registers"  : [ "q6" ],
+//                "invalidate-registers" : [ "q6", "d12", "d13", "s24", "s25", "s26", "s27" ]
+//            },
+//            "s28" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q7" ],
+//                "invalidate-registers" : [ "q7", "d14", "d15", "s28", "s29", "s30", "s31" ]
+//            },
+//            "s29" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q7" ],
+//                "invalidate-registers" : [ "q7", "d14", "d15", "s28", "s29", "s30", "s31" ]
+//            },
+//            "s30" : {
+//                "parent-element"       : 2,
+//                "container-registers"  : [ "q7" ],
+//                "invalidate-registers" : [ "q7", "d14", "d15", "s28", "s29", "s30", "s31" ]
+//            },
+//            "s31" : {
+//                "parent-element"       : 3,
+//                "container-registers"  : [ "q7" ],
+//                "invalidate-registers" : [ "q7", "d14", "d15", "s28", "s29", "s30", "s31" ]
+//            }
+//        },
+//
+//        "vfp-double" : {
+//            "*" : {
+//                //
+//                // Common to all registers
+//                //
+//                "bit-size"              : 64,
+//                "encoding"              : "ieee-double",
+//                "format"                : "vector",
+//
+//                "base-gdb-reg-number"   : 75,
+//                "base-dwarf-reg-number" : 256,
+//
+//                "parent-set"            : "vfp-quad",
+//                "referencing-sets"      : [ "vfp-quad", "vfp-single" ]
+//            },
+//
+//            "d0"  : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q0" ],
+//                "invalidate-registers" : [ "q0", "d0", "d1", "s0", "s1", "s2", "s3" ]
+//            },
+//            "d1"  : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q0" ],
+//                "invalidate-registers" : [ "q0", "d0", "d1", "s0", "s1", "s2", "s3" ]
+//            },
+//            "d2"  : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q1" ],
+//                "invalidate-registers" : [ "q1", "d2", "d3", "s4", "s5", "s6", "s7" ]
+//            },
+//            "d3"  : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q1" ],
+//                "invalidate-registers" : [ "q1", "d2", "d3", "s4", "s5", "s6", "s7" ]
+//            },
+//            "d4"  : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q2" ],
+//                "invalidate-registers" : [ "q2", "d4", "d5", "s8", "s9", "s10", "s11" ]
+//            },
+//            "d5"  : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q2" ],
+//                "invalidate-registers" : [ "q2", "d4", "d5", "s8", "s9", "s10", "s11" ]
+//            },
+//            "d6"  : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q3" ],
+//                "invalidate-registers" : [ "q3", "d6", "d7", "s12", "s13", "s14", "s15" ]
+//            },
+//            "d7"  : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q3" ],
+//                "invalidate-registers" : [ "q3", "d6", "d7", "s12", "s13", "s14", "s15" ]
+//            },
+//            "d8"  : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q4" ],
+//                "invalidate-registers" : [ "q4", "d8", "d9", "s16", "s17", "s18", "s19" ]
+//            },
+//            "d9"  : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q4" ],
+//                "invalidate-registers" : [ "q4", "d8", "d9", "s16", "s17", "s18", "s19" ]
+//            },
+//            "d10" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q5" ],
+//                "invalidate-registers" : [ "q5", "d10", "d11", "s20", "s21", "s22", "s23" ]
+//            },
+//            "d11" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q5" ],
+//                "invalidate-registers" : [ "q5", "d10", "d11", "s20", "s21", "s22", "s23" ]
+//            },
+//            "d12" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q6" ],
+//                "invalidate-registers" : [ "q6", "d12", "d13", "s24", "s25", "s26", "s27" ]
+//            },
+//            "d13" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q6" ],
+//                "invalidate-registers" : [ "q6", "d12", "d13", "s24", "s25", "s26", "s27" ]
+//            },
+//            "d14" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q7" ],
+//                "invalidate-registers" : [ "q7", "d14", "d15", "s28", "s29", "s30", "s31" ]
+//            },
+//            "d15" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q7" ],
+//                "invalidate-registers" : [ "q7", "d14", "d15", "s28", "s29", "s30", "s31" ]
+//            },
+//            "d16" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q8" ],
+//                "invalidate-registers" : [ "q8", "d16", "d17" ]
+//            },
+//            "d17" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q8" ],
+//                "invalidate-registers" : [ "q8", "d16", "d17" ]
+//            },
+//            "d18" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q9" ],
+//                "invalidate-registers" : [ "q9", "d18", "d19" ]
+//            },
+//            "d19" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q9" ],
+//                "invalidate-registers" : [ "q9", "d18", "d19" ]
+//            },
+//            "d20" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q10" ],
+//                "invalidate-registers" : [ "q10", "d20", "d21" ]
+//            },
+//            "d21" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q10" ],
+//                "invalidate-registers" : [ "q10", "d20", "d21" ]
+//            },
+//            "d22" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q11" ],
+//                "invalidate-registers" : [ "q11", "d22", "d23" ]
+//            },
+//            "d23" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q11" ],
+//                "invalidate-registers" : [ "q11", "d22", "d23" ]
+//            },
+//            "d24" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q12" ],
+//                "invalidate-registers" : [ "q12", "d24", "d25" ]
+//            },
+//            "d25" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q12" ],
+//                "invalidate-registers" : [ "q12", "d24", "d25" ]
+//            },
+//            "d26" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q13" ],
+//                "invalidate-registers" : [ "q13", "d26", "d27" ]
+//            },
+//            "d27" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q13" ],
+//                "invalidate-registers" : [ "q13", "d26", "d27" ]
+//            },
+//            "d28" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q14" ],
+//                "invalidate-registers" : [ "q14", "d28", "d29" ]
+//            },
+//            "d29" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q14" ],
+//                "invalidate-registers" : [ "q14", "d28", "d29" ]
+//            },
+//            "d30" : {
+//                "parent-element"       : 0,
+//                "container-registers"  : [ "q15" ],
+//                "invalidate-registers" : [ "q15", "d30", "d31" ]
+//            },
+//            "d31" : {
+//                "parent-element"       : 1,
+//                "container-registers"  : [ "q15" ],
+//                "invalidate-registers" : [ "q15", "d30", "d31" ]
+//            }
+//        },
+//
+//        "vfp-quad" : {
+//            "*" : {
+//                //
+//                // Common to all registers
+//                //
+//                "bit-size"              : 128,
+//                "encoding"              : "ieee-extended",
+//                "format"                : "vector",
+//
+//                "base-gdb-reg-number"   : 26,
+//                "base-dwarf-reg-number" : 64,
+//
+//                "referencing-sets"      : [ "vfp-double", "vfp-single" ]
+//            },
+//
+//            "q0"  : {
+//                "invalidate-registers" : [ "q0", "d0", "d1", "s0", "s1", "s2", "s3" ]
+//            },
+//            "q1"  : {
+//                "invalidate-registers" : [ "q1", "d2", "d3", "s4", "s5", "s6", "s7" ]
+//            },
+//            "q2"  : {
+//                "invalidate-registers" : [ "q2", "d4", "d5", "s8", "s9", "s10", "s11" ]
+//            },
+//            "q3"  : {
+//                "invalidate-registers" : [ "q3", "d6", "d7", "s12", "s13", "s14", "s15" ]
+//            },
+//            "q4"  : {
+//                "invalidate-registers" : [ "q4", "d8", "d9", "s16", "s17", "s18", "s19" ]
+//            },
+//            "q5"  : {
+//                "invalidate-registers" : [ "q5", "d10", "d11", "s20", "s21", "s22", "s23" ]
+//            },
+//            "q6"  : {
+//                "invalidate-registers" : [ "q6", "d12", "d13", "s24", "s25", "s26", "s27" ]
+//            },
+//            "q7"  : {
+//                "invalidate-registers" : [ "q7", "d14", "d15", "s28", "s29", "s30", "s31" ]
+//            },
+//            "q8"  : {
+//                "invalidate-registers" : [ "q8", "d16", "d17" ]
+//            },
+//            "q9"  : {
+//                "invalidate-registers" : [ "q9", "d18", "d19" ]
+//            },
+//            "q10" : {
+//                "invalidate-registers" : [ "q10", "d20", "d21" ]
+//            },
+//            "q11" : {
+//                "invalidate-registers" : [ "q11", "d22", "d23" ]
+//            },
+//            "q12" : {
+//                "invalidate-registers" : [ "q12", "d24", "d25" ]
+//            },
+//            "q13" : {
+//                "invalidate-registers" : [ "q13", "d26", "d27" ]
+//            },
+//            "q14" : {
+//                "invalidate-registers" : [ "q14", "d28", "d29" ]
+//            },
+//            "q15" : {
+//                "invalidate-registers" : [ "q15", "d30", "d31" ]
+//            }
+//        },
+//
+//        "fpscr" : {
+//            "fpscr" : {
+//                "bit-size"       : 32,
+//                "encoding"       : "int",
+//                "format"         : "hex",
+//                "gdb-encoding"   : "int",
+//                "gdb-group"      : "float",
+//                "gdb-reg-number" : 58
+//            }
+//        }
+    },
+
+    "gdb-defs" : {
+        "architecture" : "aarch64",
+        "features"     : [
+            {
+                "filename"   : "aarch64-core.xml",
+                "identifier" : "org.gnu.gdb.aarch64.core",
+                "contents"   : [
+                    "register-sets:gpr",
+                    "register-sets:cpsr"
+                ]
+//            },
+//            {
+//                "indexed"    : false,
+//                "filename"   : "arm-vfpv3.xml",
+//                "identifier" : "org.gnu.gdb.arm.vfp",
+//                "contents"   : [
+//                    "register-sets:vfp-double",
+//                    "register-sets:fpscr"
+//                ]
+//            },
+//            {
+//                "identifier" : "org.gnu.gdb.arm.neon"
+            }
+        ]
+    },
+
+    "lldb-defs" : [
+        {
+            "description" : "General Purpose Registers",
+            "sets"        : [ "gpr", "cpsr", "pseudo-gpr32" ]
+//        },
+//        {
+//            "description" : "VFP Registers",
+//            "sets"        : [ "vfp-single", "vfp-double", "vfp-quad", "fpscr" ]
+        }
+    ]
+}

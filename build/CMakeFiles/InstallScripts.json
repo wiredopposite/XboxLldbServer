@@ -1,0 +1,22 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/dev/XboxLldbServer/build/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/hal/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/libjpeg/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/libpng/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/net/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/nxdk/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/pbkit/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/sdl/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/usb/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/winapi/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/xboxkrnl/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/xboxrt/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/nxdk/lib/zlib/cmake_install.cmake",
+		"C:/dev/XboxLldbServer/build/external/JSObjects/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

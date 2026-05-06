@@ -1,0 +1,1128 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "nxdk/lib/sdl/lib_nxdk_sdl2.lib"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_dependencies",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"external/nxdk/lib/sdl/CMakeLists.txt",
+			"external/nxdk/lib/xboxkrnl/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 33,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 26,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_core::@dcad1c77f0e418971304"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_core::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libjpeg::@51f67e8ab939a74e7f7c"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libpng::@8fed5febe7c8197d34b9"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-target i386-pc-win32     -march=pentium3     -fuse-ld=nxdk-link     -ffreestanding     -nostdlib     -fno-builtin     -Wno-builtin-macro-redefined     -DNXDK     -DXBOX     -D_XBOX     -D__STDC__=1     -U__STDC_NO_THREADS__"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "USBH_USE_EXTERNAL_CONFIG=\"usbh_config_xbox.h\""
+				},
+				{
+					"backtrace" : 5,
+					"define" : "XBOX"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/sdl/SDL2/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/winapi/winmm"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/usb/libusbohci/inc"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/usb/libusbohci_xbox"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/libjpeg"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/libjpeg/libjpeg-turbo"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/libpng"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/libpng/libpng"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/platform/xbox/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/libc_extensions"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/winapi"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/vcruntime"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_pdclib::@2232a173a302bf7dcfaa"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libcxx::@2232a173a302bf7dcfaa"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_hal::@a3962fa6db5a55c831bb"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libjpeg::@51f67e8ab939a74e7f7c"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libpng::@8fed5febe7c8197d34b9"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_core::@dcad1c77f0e418971304"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_core::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_xboxrt::@32564726dc26f700011f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_winapi::@062a356494d63b85c1dc"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "_nxdk_xboxkrnl_gen::@ec7b5337a1b5c3b768fc"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_zlib::@cf7e0290dc373448ab2b"
+		}
+	],
+	"id" : "_nxdk_sdl2::@117fd6236356a5448ca4",
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_core::@dcad1c77f0e418971304"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_core::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libjpeg::@51f67e8ab939a74e7f7c"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libpng::@8fed5febe7c8197d34b9"
+		}
+	],
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_core::@dcad1c77f0e418971304"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_core::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libjpeg::@51f67e8ab939a74e7f7c"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libpng::@8fed5febe7c8197d34b9"
+		}
+	],
+	"name" : "_nxdk_sdl2",
+	"nameOnDisk" : "lib_nxdk_sdl2.lib",
+	"paths" : 
+	{
+		"build" : "nxdk/lib/sdl",
+		"source" : "external/nxdk/lib/sdl"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/SDL.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/SDL_assert.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/SDL_dataqueue.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/SDL_error.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/SDL_hints.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/SDL_log.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/atomic/SDL_atomic.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/atomic/SDL_spinlock.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/audio/SDL_audio.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/audio/SDL_audiocvt.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/audio/SDL_audiodev.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/audio/SDL_audiotypecvt.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/audio/SDL_mixer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/audio/SDL_wave.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/audio/xbox/SDL_xboxaudio.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/cpuinfo/SDL_cpuinfo.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_clipboardevents.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_displayevents.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_dropevents.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_events.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_gesture.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_keyboard.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_mouse.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_quit.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_touch.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/events/SDL_windowevents.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/file/SDL_rwops.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/filesystem/dummy/SDL_sysfilesystem.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/haptic/SDL_haptic.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/haptic/dummy/SDL_syshaptic.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/joystick/SDL_gamecontroller.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/joystick/SDL_joystick.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/joystick/xbox/SDL_xboxjoystick.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/e_atan2.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/e_exp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/e_fmod.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/e_log.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/e_log10.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/e_pow.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/e_rem_pio2.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/e_sqrt.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/k_cos.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/k_rem_pio2.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/k_sin.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/k_tan.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/s_atan.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/s_copysign.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/s_cos.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/s_fabs.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/s_floor.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/s_scalbn.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/s_sin.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/libm/s_tan.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/loadso/dummy/SDL_sysloadso.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/power/SDL_power.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/SDL_d3dmath.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/SDL_render.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/SDL_yuv_sw.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/software/SDL_blendfillrect.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/software/SDL_blendline.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/software/SDL_blendpoint.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/software/SDL_drawline.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/software/SDL_drawpoint.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/software/SDL_render_sw.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/render/software/SDL_rotate.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/sensor/SDL_sensor.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/sensor/dummy/SDL_dummysensor.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/stdlib/SDL_getenv.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/stdlib/SDL_iconv.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/stdlib/SDL_malloc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/stdlib/SDL_qsort.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/stdlib/SDL_stdlib.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/stdlib/SDL_string.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/thread/SDL_thread.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/thread/generic/SDL_syscond.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/thread/windows/SDL_sysmutex.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/thread/windows/SDL_syssem.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/thread/windows/SDL_systhread.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/thread/windows/SDL_systls.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/timer/SDL_timer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/timer/windows/SDL_systimer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_RLEaccel.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_blit.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_blit_0.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_blit_1.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_blit_A.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_blit_N.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_blit_auto.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_blit_copy.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_blit_slow.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_bmp.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_clipboard.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_egl.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_fillrect.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_pixels.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_rect.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_shape.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_stretch.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_surface.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_video.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_vulkan_utils.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/SDL_yuv.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/xbox/SDL_xbevents.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/xbox/SDL_xbframebuffer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/xbox/SDL_xbvideo.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL2/src/video/yuv2rgb/yuv_rgb.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

@@ -1,0 +1,198 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "nxdk/lib/zlib/libnxdk_zlib.lib"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"external/nxdk/lib/zlib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-target i386-pc-win32     -march=pentium3     -fuse-ld=nxdk-link     -ffreestanding     -nostdlib     -fno-builtin     -Wno-builtin-macro-redefined     -DNXDK     -DXBOX     -D_XBOX     -D__STDC__=1     -U__STDC_NO_THREADS__"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "Z_SOLO"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/zlib/zlib"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/platform/xbox/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/libc_extensions"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/winapi"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/vcruntime"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		}
+	],
+	"id" : "nxdk_zlib::@cf7e0290dc373448ab2b",
+	"name" : "nxdk_zlib",
+	"nameOnDisk" : "libnxdk_zlib.lib",
+	"paths" : 
+	{
+		"build" : "nxdk/lib/zlib",
+		"source" : "external/nxdk/lib/zlib"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/zlib/zlib/adler32.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/zlib/zlib/crc32.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/zlib/zlib/deflate.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/zlib/zlib/infback.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/zlib/zlib/inffast.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/zlib/zlib/inflate.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/zlib/zlib/inftrees.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/zlib/zlib/trees.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/zlib/zlib/zutil.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

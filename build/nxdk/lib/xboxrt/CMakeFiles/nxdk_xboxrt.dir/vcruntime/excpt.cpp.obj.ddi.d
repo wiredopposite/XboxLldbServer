@@ -1,0 +1,36 @@
+nxdk\lib\xboxrt\CMakeFiles\nxdk_xboxrt.dir\vcruntime\excpt.cpp.obj.ddi: \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxrt\vcruntime\excpt.cpp \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxrt\vcruntime\excpt.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\stdint.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\__config \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\stdint.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\pdclib\_PDCLIB_lib_ext1.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\pdclib\_PDCLIB_int.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\platform\xbox\include\pdclib\_PDCLIB_config.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\pdclib\_PDCLIB_aux.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\windows.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\debugapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\windef.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxkrnl\xboxdef.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\errhandlingapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\winbase.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\basetsd.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\minwinbase.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxkrnl\ntstatus.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\winnt.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\fibersapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\fileapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\handleapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\libloaderapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\memoryapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxkrnl\xboxkrnl.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\string.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\string.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxrt\libc_extensions\string_ext_.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\processthreadsapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\profileapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\synchapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\sysinfoapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\timezoneapi.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\winapi\winerror.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxrt\vcruntime\eh.h

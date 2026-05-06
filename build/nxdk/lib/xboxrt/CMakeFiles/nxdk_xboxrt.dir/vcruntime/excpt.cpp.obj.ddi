@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "nxdk\\lib\\xboxrt\\CMakeFiles\\nxdk_xboxrt.dir\\vcruntime\\excpt.cpp.obj"
+    }
+  ],
+  "version": 1
+}

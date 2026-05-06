@@ -1,0 +1,9 @@
+ninja_dyndep_version = 1.0
+build nxdk/lib/xboxrt/CMakeFiles/nxdk_xboxrt.dir/vcruntime/vcruntime_exception.cpp.obj: dyndep
+
+build nxdk/lib/xboxrt/CMakeFiles/nxdk_xboxrt.dir/vcruntime/vcruntime_typeinfo.cpp.obj: dyndep
+
+build nxdk/lib/xboxrt/CMakeFiles/nxdk_xboxrt.dir/vcruntime/eh.cpp.obj: dyndep
+
+build nxdk/lib/xboxrt/CMakeFiles/nxdk_xboxrt.dir/vcruntime/excpt.cpp.obj: dyndep
+

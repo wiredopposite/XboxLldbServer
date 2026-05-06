@@ -1,0 +1,5 @@
+{
+    "cmake.environment": {
+        "NXDK_DIR" : "${workspaceFolder}/external/nxdk"
+    }
+}

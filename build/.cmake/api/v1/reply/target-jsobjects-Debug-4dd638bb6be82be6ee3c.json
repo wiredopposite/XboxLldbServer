@@ -1,0 +1,272 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "external/JSObjects/libjsobjects.lib"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"external/JSObjects/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 40,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 46,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 48,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-target i386-pc-win32     -march=pentium3     -fuse-ld=nxdk-link     -ffreestanding     -nostdlib     -fno-builtin     -Wno-builtin-macro-redefined     -DNXDK     -DXBOX     -D_XBOX     -D__STDC__=1     -U__STDC_NO_THREADS__ -std=c11"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "C:/dev/XboxLldbServer/external/JSObjects/Headers"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/dev/XboxLldbServer/external/JSObjects/Sources/libjson"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/dev/XboxLldbServer/build/external/JSObjects"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/platform/xbox/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/libc_extensions"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/winapi"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/vcruntime"
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				4,
+				5
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-target i386-pc-win32     -march=pentium3     -fuse-ld=nxdk-link     -ffreestanding     -nostdlib     -fno-builtin     -Wno-builtin-macro-redefined     -DNXDK     -DXBOX     -D_XBOX     -D__STDC__=1     -U__STDC_NO_THREADS__  -fno-exceptions -std=c++14"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "C:/dev/XboxLldbServer/external/JSObjects/Headers"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/dev/XboxLldbServer/external/JSObjects/Sources/libjson"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/dev/XboxLldbServer/build/external/JSObjects"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/libcxx/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/platform/xbox/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/libc_extensions"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/winapi"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/vcruntime"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				3
+			]
+		}
+	],
+	"id" : "jsobjects::@08fc92e1951238bcb204",
+	"name" : "jsobjects",
+	"nameOnDisk" : "libjsobjects.lib",
+	"paths" : 
+	{
+		"build" : "external/JSObjects",
+		"source" : "external/JSObjects"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				6,
+				7
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/external/JSObjects/parser.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/external/JSObjects/parser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/external/JSObjects/tokenizer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "external/JSObjects/Sources/JSObjects.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/JSObjects/Sources/libjson/json.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/JSObjects/Sources/libjson/qstring.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/external/JSObjects/parser.c.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/external/JSObjects/tokenizer.c.rule",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

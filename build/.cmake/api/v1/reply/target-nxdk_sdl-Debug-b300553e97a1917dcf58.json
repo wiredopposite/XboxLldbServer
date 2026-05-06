@@ -1,0 +1,86 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"external/nxdk/lib/sdl/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 95,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "nxdk_sdl::@117fd6236356a5448ca4",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "_nxdk_sdl2::@117fd6236356a5448ca4"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "_nxdk_sdl_ttf::@117fd6236356a5448ca4"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "_nxdk_sdl_freetype::@117fd6236356a5448ca4"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "_nxdk_sdl2_image::@117fd6236356a5448ca4"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "_nxdk_sdl2::@117fd6236356a5448ca4"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "_nxdk_sdl_ttf::@117fd6236356a5448ca4"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "_nxdk_sdl_freetype::@117fd6236356a5448ca4"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "_nxdk_sdl2_image::@117fd6236356a5448ca4"
+		}
+	],
+	"name" : "nxdk_sdl",
+	"paths" : 
+	{
+		"build" : "nxdk/lib/sdl",
+		"source" : "external/nxdk/lib/sdl"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

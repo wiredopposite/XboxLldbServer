@@ -1,0 +1,274 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "nxdk/lib/sdl/lib_nxdk_sdl_freetype.lib"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_dependencies",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"external/nxdk/lib/sdl/CMakeLists.txt",
+			"external/nxdk/lib/xboxkrnl/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 65,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 26,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_runtime::@2232a173a302bf7dcfaa"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-target i386-pc-win32     -march=pentium3     -fuse-ld=nxdk-link     -ffreestanding     -nostdlib     -fno-builtin     -Wno-builtin-macro-redefined     -DNXDK     -DXBOX     -D_XBOX     -D__STDC__=1     -U__STDC_NO_THREADS__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/sdl"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/winapi/winmm"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/platform/xbox/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/libc_extensions"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/winapi"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/vcruntime"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_pdclib::@2232a173a302bf7dcfaa"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_libcxx::@2232a173a302bf7dcfaa"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_hal::@a3962fa6db5a55c831bb"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_xboxrt::@32564726dc26f700011f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_winapi::@062a356494d63b85c1dc"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "_nxdk_xboxkrnl_gen::@ec7b5337a1b5c3b768fc"
+		}
+	],
+	"id" : "_nxdk_sdl_freetype::@117fd6236356a5448ca4",
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_runtime::@2232a173a302bf7dcfaa"
+		}
+	],
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_runtime::@2232a173a302bf7dcfaa"
+		}
+	],
+	"name" : "_nxdk_sdl_freetype",
+	"nameOnDisk" : "lib_nxdk_sdl_freetype.lib",
+	"paths" : 
+	{
+		"build" : "nxdk/lib/sdl",
+		"source" : "external/nxdk/lib/sdl"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/base/ftbase.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/base/ftglyph.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/base/ftbitmap.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/base/ftstroke.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/base/ftinit.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/base/ftsystem.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/truetype/truetype.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/raster/raster.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/smooth/smooth.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/autofit/autofit.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/sdl/SDL_ttf/external/freetype-2.4.12/src/sfnt/sfnt.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

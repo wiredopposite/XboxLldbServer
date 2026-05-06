@@ -1,0 +1,102 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"external/nxdk/lib/usb/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 55,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "nxdk_usb::@0819b32e0de6c3431905",
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_core::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_hid::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_cdc::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_msc::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_uac::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_uvc::@0819b32e0de6c3431905"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_core::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_hid::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_cdc::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_msc::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_uac::@0819b32e0de6c3431905"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "nxdk_usb_uvc::@0819b32e0de6c3431905"
+		}
+	],
+	"name" : "nxdk_usb",
+	"paths" : 
+	{
+		"build" : "nxdk/lib/usb",
+		"source" : "external/nxdk/lib/usb"
+	},
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

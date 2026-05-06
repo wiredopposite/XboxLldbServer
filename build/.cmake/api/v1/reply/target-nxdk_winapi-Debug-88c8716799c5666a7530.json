@@ -1,0 +1,280 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "nxdk/lib/winapi/libnxdk_winapi.lib"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"external/nxdk/lib/winapi/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 26,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-target i386-pc-win32     -march=pentium3     -fuse-ld=nxdk-link     -ffreestanding     -nostdlib     -fno-builtin     -Wno-builtin-macro-redefined     -DNXDK     -DXBOX     -D_XBOX     -D__STDC__=1     -U__STDC_NO_THREADS__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/winapi/winmm"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/pdclib/platform/xbox/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/libc_extensions"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/winapi"
+				},
+				{
+					"isSystem" : true,
+					"path" : "c:/dev/XboxLldbServer/external/nxdk/lib/xboxrt/vcruntime"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			]
+		}
+	],
+	"id" : "nxdk_winapi::@062a356494d63b85c1dc",
+	"name" : "nxdk_winapi",
+	"nameOnDisk" : "libnxdk_winapi.lib",
+	"paths" : 
+	{
+		"build" : "nxdk/lib/winapi",
+		"source" : "external/nxdk/lib/winapi"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/badptr.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/debug.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/errhandlingapi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/error.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/fiber.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/fileio.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/filemanip.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/findfile.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/handleapi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/ioapi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/memory.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/libloaderapi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/profiling.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/shlobj_core.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/sync.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/sysinfo.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/thread.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/timezoneapi.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/tls.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/winnt.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "external/nxdk/lib/winapi/winmm/timeapi.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

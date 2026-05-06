@@ -1,0 +1,35 @@
+nxdk\lib\CMakeFiles\nxdk_libcxx.dir\libcxx\src\mutex_destructor.cpp.obj.ddi: \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\src\mutex_destructor.cpp \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\__config \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\__threading_support \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\chrono \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\ctime \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\time.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\pdclib\_PDCLIB_lib_ext1.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\pdclib\_PDCLIB_int.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\platform\xbox\include\pdclib\_PDCLIB_config.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\pdclib\_PDCLIB_aux.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\type_traits \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\cstddef \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\version \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\stddef.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\__nullptr \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\ratio \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\cstdint \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\stdint.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\stdint.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\climits \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\limits.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\limits.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\__undef_macros \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\limits \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\iosfwd \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\wchar.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxrt\libc_extensions\wchar.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\stddef.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\wctype.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\wctype.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxrt\libc_extensions\wchar_ext_.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\libcxx\include\errno.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\pdclib\include\errno.h \
+  c:\dev\XboxLldbServer\external\nxdk\lib\xboxrt\libc_extensions\errno_ext_.h

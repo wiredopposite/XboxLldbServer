@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "nxdk\\lib\\CMakeFiles\\nxdk_libcxx.dir\\libcxx\\src\\algorithm.cpp.obj"
+    }
+  ],
+  "version": 1
+}
