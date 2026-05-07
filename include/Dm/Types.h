@@ -2,7 +2,7 @@
 
 #include <windows.h>
 
-// #ifdef DM_SHARED_LIB
+// #ifndef DM_SHARED_LIBRARY
 #if 1
 #define DMAPI extern "C" __declspec(dllexport)
 #else
@@ -86,11 +86,11 @@ _Static_assert(sizeof(KTRAP_FRAME) == 0x50, "KTRAP_FRAME size mismatch");
 typedef 
 BOOLEAN 
 (*PDEBUG_ROUTINE)(
-    PKTRAP_FRAME, 
-    struct _KEXCEPTION_FRAME*,
-    PEXCEPTION_RECORD,
-    PCONTEXT,
-    BOOLEAN
+    PKTRAP_FRAME TrapFrame, 
+    struct _KEXCEPTION_FRAME *ExceptionFrame,
+    PEXCEPTION_RECORD ExceptionRecord,
+    PCONTEXT Context,
+    BOOLEAN FirstChance
 );
 
 typedef struct _DMINIT

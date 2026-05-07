@@ -1,5 +1,9 @@
 {
     "cmake.environment": {
         "NXDK_DIR" : "${workspaceFolder}/external/nxdk"
-    }
+    },
+    "cmake.configureArgs": [
+        // "-DCMAKE_SYSTEM_NAME=Windows",
+        // "-DCMAKE_TOOLCHAIN_FILE=external/nxdk/cmake/toolchain.cmake"
+    ]
 }

@@ -3,7 +3,11 @@ cmake_minimum_required(VERSION 4.0)
 set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_LIST_DIR}/external/nxdk/cmake/toolchain.cmake")
 
 set(CMAKE_PROJECT_NAME XboxLldbServer)
+
 project(${CMAKE_PROJECT_NAME} C CXX)
+
+set(CMAKE_SHARED_LIBRARY_SUFFIX ".dll")
+set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
@@ -11,8 +15,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory($ENV{NXDK_DIR} nxdk)
 add_subdirectory(external/JSObjects)
+# add_subdirectory(external/RegsGen2)
+# set(REGS_GEN_)
 
-add_executable(${CMAKE_PROJECT_NAME}
+add_library(${CMAKE_PROJECT_NAME} SHARED
     ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
 
     ${CMAKE_CURRENT_LIST_DIR}/src/GDBRemote/Structures.cpp
@@ -69,8 +75,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 
 target_compile_definitions(${CMAKE_PROJECT_NAME}
     PRIVATE
-        # PLATFORM_NXDK=1
-        # OS_WIN32=1
+        _HAS_EXCEPTIONS=0
 )
 
 add_compile_options("-Wno-macro-redefined")
@@ -84,3 +89,46 @@ target_link_options(${CMAKE_PROJECT_NAME}
     PRIVATE
         -ENTRY:DmEntryPoint
 )
+
+include(ExternalProject)
+set(REGSGEN2_DIR ${CMAKE_CURRENT_LIST_DIR}/external/RegsGen2)
+set(REGSGEN2_BUILD_DIR ${CMAKE_CURRENT_BINARY_DIR}/RegsGen2)
+set(REGSGEN2_EXECUTABLE ${REGSGEN2_BUILD_DIR}/RegsGen2${CMAKE_HOST_EXECUTABLE_SUFFIX})
+ExternalProject_Add(RegsGen2_Host
+    SOURCE_DIR ${REGSGEN2_DIR}
+    BINARY_DIR ${REGSGEN2_BUILD_DIR}
+    CMAKE_ARGS 
+        -DCMAKE_BUILD_TYPE=Release
+        -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=${REGSGEN2_BUILD_DIR}
+    INSTALL_COMMAND ""
+)
+
+set(GEN_DIR ${CMAKE_CURRENT_BINARY_DIR}/generated)
+set(GEN_HEADER_OUTPUT ${GEN_DIR}/Architecture/X86/RegistersDescriptors.h)
+set(GEN_CPP_OUTPUT ${GEN_DIR}/Architecture/X86/RegistersDescriptors.cpp)
+set(GEN_JSON_INPUT ${CMAKE_CURRENT_LIST_DIR}/json/X86.json)
+set(GEN_HEADER_INPUT ${CMAKE_CURRENT_LIST_DIR}/src/Architecture/RegisterLayout.h)
+add_custom_command(
+    OUTPUT ${GEN_HEADER_OUTPUT}
+    DEPENDS RegsGen2_Host ${GEN_JSON_INPUT} ${GEN_HEADER_INPUT}
+    COMMAND
+        ${REGSGEN2_EXECUTABLE} 
+        -a windows
+        -I ${GEN_HEADER_INPUT}
+        -h -o ${GEN_HEADER_OUTPUT}
+        -f ${GEN_JSON_INPUT}
+)
+add_custom_command(
+    OUTPUT ${GEN_CPP_OUTPUT}
+    DEPENDS ${GEN_HEADER_OUTPUT}
+    COMMAND
+        ${REGSGEN2_EXECUTABLE} 
+        -a windows
+        -I ${GEN_HEADER_OUTPUT} 
+        -c -o ${GEN_CPP_OUTPUT}
+        -f ${GEN_JSON_INPUT}
+)
+add_custom_target(GenerateX86RegisterDescriptors ALL DEPENDS ${GEN_CPP_OUTPUT})
+add_dependencies(${CMAKE_PROJECT_NAME} GenerateX86RegisterDescriptors)
+target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${GEN_DIR})
+target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${GEN_CPP_OUTPUT})

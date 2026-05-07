@@ -12,35 +12,14 @@
 
 #include "Types/Types.h"
 
-#define __FORWARD_DECLARE(TARGET, NAME)                                        \
-  namespace TARGET {                                                           \
-  class NAME;                                                                  \
-  }                                                                            \
-  using TARGET::NAME
-
 namespace ds2 {
 namespace Target {
 
 class ProcessBase;
+class Process;
+class ThreadBase;
+class Thread;
 
-#if defined(OS_LINUX)
-__FORWARD_DECLARE(Linux, Process);
-__FORWARD_DECLARE(Linux, Thread);
-#elif defined(OS_WIN32) && (defined(PLATFORM_NXDK) || defined(NXDK))
-__FORWARD_DECLARE(Xbox, Process);
-__FORWARD_DECLARE(Xbox, Thread);
-#elif defined(OS_WIN32)
-__FORWARD_DECLARE(Windows, Process);
-__FORWARD_DECLARE(Windows, Thread);
-#elif defined(OS_FREEBSD)
-__FORWARD_DECLARE(FreeBSD, Process);
-__FORWARD_DECLARE(FreeBSD, Thread);
-#elif defined(OS_DARWIN)
-__FORWARD_DECLARE(Darwin, Process);
-__FORWARD_DECLARE(Darwin, Thread);
-#else
-#error "Target not supported."
-#endif
 } // namespace Target
 } // namespace ds2
 
