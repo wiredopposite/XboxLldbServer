@@ -9,7 +9,7 @@
 //
 
 #include "Host/Platform.h"
-#include "Base.h"
+#include "Types/Base.h"
 
 namespace ds2 {
 namespace Host {

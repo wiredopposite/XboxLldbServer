@@ -1,9 +1,0 @@
-{
-  "revision": 0,
-  "rules": [
-    {
-      "primary-output": "nxdk\\lib\\CMakeFiles\\nxdk_libcxx.dir\\libcxx\\src\\stdexcept.cpp.obj"
-    }
-  ],
-  "version": 1
-}

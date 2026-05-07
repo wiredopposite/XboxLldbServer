@@ -10,9 +10,9 @@
 
 #pragma once
 
-#include "Base.h"
-#include "Constants.h"
-#include "Types.h"
+#include "Types/Base.h"
+#include "Types/Constants.h"
+#include "Types/Types.h"
 #include "Utils/Log.h"
 
 #include <string>

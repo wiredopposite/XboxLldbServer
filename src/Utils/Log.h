@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "Base.h"
+#include "Types/Base.h"
 #include "Utils/CompilerSupport.h"
 
 #include <cinttypes>

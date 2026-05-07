@@ -12,7 +12,7 @@
 
 #include "Core/MessageQueue.h"
 #include "Host/Channel.h"
-#include "Types.h"
+#include "Types/Types.h"
 
 #include <string>
 

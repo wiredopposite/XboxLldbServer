@@ -12,7 +12,7 @@
 
 #include "Architecture/RegisterLayout.h"
 #include "GDBRemote/Base.h"
-#include "../Types.h"
+#include "Types/Types.h"
 #include "JSObjects/JSObjects.h"
 
 #include <set>

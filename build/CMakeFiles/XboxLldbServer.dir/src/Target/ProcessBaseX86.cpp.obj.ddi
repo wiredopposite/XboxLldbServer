@@ -1,9 +1,0 @@
-{
-  "revision": 0,
-  "rules": [
-    {
-      "primary-output": "CMakeFiles\\XboxLldbServer.dir\\src\\Target\\ProcessBaseX86.cpp.obj"
-    }
-  ],
-  "version": 1
-}

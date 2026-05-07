@@ -1,9 +1,0 @@
-{
-  "revision": 0,
-  "rules": [
-    {
-      "primary-output": "nxdk\\lib\\CMakeFiles\\nxdk_libcxx.dir\\libcxx\\src\\support\\win32\\thread_win32.cpp.obj"
-    }
-  ],
-  "version": 1
-}

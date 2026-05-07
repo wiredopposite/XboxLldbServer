@@ -1,7 +1,7 @@
 #include <xboxkrnl/xboxkrnl.h>
 #include <nxdk/net.h>
 #include "Dm/Types.h"
-#include "Dm/Log.h"
+// #include "Dm/Log.h"
 
 DMAPI ULONG CDECL DmEntryPoint(PVOID pImageBase, PDMINIT pDmInit, ULONG) {
     // Platform::Initialize();
@@ -9,4 +9,5 @@ DMAPI ULONG CDECL DmEntryPoint(PVOID pImageBase, PDMINIT pDmInit, ULONG) {
 
     // if (argv[1][0] == 'g')
     //   return GdbserverMain(argc, argv);
+    return 0;
 }

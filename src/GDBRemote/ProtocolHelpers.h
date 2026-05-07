@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "../Types.h"
+#include "Types/Types.h"
 #include "Utils/Log.h"
 
 #include <algorithm>

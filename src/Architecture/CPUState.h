@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "Types.h"
+#include "Types/Types.h"
 
 #define CPUSTATE_H_INTERNAL
 

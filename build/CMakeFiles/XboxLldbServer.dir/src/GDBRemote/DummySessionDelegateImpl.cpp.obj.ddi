@@ -1,9 +1,0 @@
-{
-  "revision": 0,
-  "rules": [
-    {
-      "primary-output": "CMakeFiles\\XboxLldbServer.dir\\src\\GDBRemote\\DummySessionDelegateImpl.cpp.obj"
-    }
-  ],
-  "version": 1
-}

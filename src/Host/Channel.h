@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "Types.h"
+#include "Types/Types.h"
 
 namespace ds2 {
 namespace Host {

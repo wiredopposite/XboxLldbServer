@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "Base.h"
+#include "Types/Base.h"
 
 #if defined(COMPILER_GCC) || defined(COMPILER_CLANG)
 #if defined(PLATFORM_MINGW)

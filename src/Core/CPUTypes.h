@@ -10,8 +10,8 @@
 
 #pragma once
 
-#include "Base.h"
-#include "Constants.h"
+#include "Types/Base.h"
+#include "Types/Constants.h"
 
 namespace ds2 {
 

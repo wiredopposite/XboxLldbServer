@@ -10,10 +10,10 @@
 
 #pragma once
 
-#include "Base.h"
-#include "Constants.h"
+#include "Types/Base.h"
+#include "Types/Constants.h"
 #include "Target/ThreadBase.h"
-#include "Types.h"
+#include "Types/Types.h"
 
 namespace ds2 {
 namespace Utils {

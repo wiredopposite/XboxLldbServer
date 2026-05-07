@@ -10,13 +10,35 @@
 
 #pragma once
 
-#include "Base.h"
-#include "Target/Xbox/Thread.h"
+#include "Types/Base.h"
+#include "Target/ThreadBase.h"
 
 namespace ds2 {
 namespace Target {
 
-using Xbox::Thread;
+class Thread : public ds2::Target::ThreadBase {
+protected:
+  friend class Process;
+  Thread(Process *process, ThreadId tid, HANDLE handle);
+
+public:
+  ~Thread() override;
+
+public:
+  ErrorCode terminate() override;
+  ErrorCode suspend() override;
+  ErrorCode step(int signal = 0, Address const &address = Address()) override;
+  ErrorCode resume(int signal = 0,
+                   Address const &address = Address()) override;
+
+public:
+  ErrorCode readCPUState(Architecture::CPUState &state) override;
+  ErrorCode writeCPUState(Architecture::CPUState const &state) override;
+
+protected:
+  HANDLE _handle;
+  void updateState() override;
+};
 
 } // namespace Target
 } // namespace ds2

@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "Types.h"
+#include "Types/Types.h"
 
 #include <functional>
 #if defined(OS_DARWIN)

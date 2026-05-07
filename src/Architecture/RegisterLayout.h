@@ -10,8 +10,8 @@
 
 #pragma once
 
-#include "Base.h"
-#include "Types.h"
+#include "Types/Base.h"
+#include "Types/Types.h"
 
 #include <map>
 
