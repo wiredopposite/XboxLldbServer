@@ -1,0 +1,93 @@
+; This is written for XBDM version 5933, earlier versions may not be compatible
+
+LIBRARY XboxDmAdapter
+
+EXPORTS
+    DmAllocatePool                      @1      NONAME
+    DmAllocatePoolWithTag               @2      NONAME
+    DmCloseCounters                     @3      NONAME
+    DmCloseLoadedModules                @4      NONAME
+    DmCloseLoadedModules                @5      NONAME
+    DmCloseNotificationSession          @6      NONAME
+    DmClosePerformanceCounter           @7      NONAME
+    DmContinueThread                    @8      NONAME
+    DmFreePool                          @9      NONAME
+    DmGetMemory                         @10     NONAME
+    DmGetModuleLongName                 @11     NONAME
+    DmGetProcAddress                    @12     NONAME
+    DmGetThreadContext                  @13     NONAME
+    DmGetThreadInfo                     @14     NONAME
+    DmGetThreadList                     @15     NONAME
+    DmGetXbeInfo                        @16     NONAME
+    DmGetXboxName                       @17     NONAME
+    DmGetXtlData                        @18     NONAME
+    DmGo                                @19     NONAME
+    DmHaltThread                        @20     NONAME
+    DmIsDebuggerPresent                 @21     NONAME
+    DmIsThreadStopped                   @22     NONAME
+    DmLoadExtension                     @23     NONAME
+    DmNotify                            @24     NONAME
+    DmOpenNotificationSession           @25     NONAME
+    DmOpenPerformanceCounter            @26     NONAME
+    DmQueryPerformanceCounterHandle     @27     NONAME
+    DmReboot                            @28     NONAME
+    ; NaP                               @29     NONAME
+    DmRegisterCommandProcessor          @30     NONAME
+    ; NaP                               @31     NONAME
+    DmRegisterNotificationProcessor     @32     NONAME
+    DmRegisterPerformanceCounter        @33     NONAME
+    DmRemoveBreakpoint                  @34     NONAME
+    DmResumeThread                      @35     NONAME
+    DmSendNotificationString            @36     NONAME
+    DmSetBreakpoint                     @37     NONAME
+    DmSetDataBreakpoint                 @38     NONAME
+    DmSetInitialBreakpoint              @39     NONAME
+    DmSetMemory                         @40     NONAME
+    DmSetThreadContext                  @41     NONAME
+    DmSetTitle                          @42     NONAME
+    DmSetXboxName                       @43     NONAME
+    DmStartProfile                      @44     NONAME
+    DmStop                              @45     NONAME
+    DmStopOn                            @46     NONAME
+    DmStopProfile                       @47     NONAME
+    DmSuspendThread                     @48     NONAME
+    DmThreadUserData                    @49     NONAME
+    DmUnloadExtension                   @50     NONAME
+    DmWalkLoadedModules                 @51     NONAME
+    DmWalkModuleSections                @52     NONAME
+    DmWalkPerformanceCounters           @53     NONAME
+    GetCurrentThreadId                  @54     NONAME
+    DmEnableGPUCounter                  @55     NONAME
+    DmIsBreakpoint                      @56     NONAME
+    DmCloseCounters                     @57     NONAME
+    DmSetUserAccess                     @58     NONAME
+    DmGetUserAccess                     @59     NONAME
+    DmWalkUserList                      @60     NONAME
+    DmAddUser                           @61     NONAME
+    DmEnableSecurity                    @62     NONAME
+    DmIsSecurityEnabled                 @63     NONAME
+    DmRemoveUser                        @64     NONAME
+    _CAP_Start_Profiling                @65     NONAME
+    _CAP_End_Profiling                  @66     NONAME
+    ; NaP                               @67     NONAME
+    ; NaP                               @68     NONAME
+    ; NaP                               @69     NONAME
+    ; NaP                               @70     NONAME
+    ; NaP                               @71     NONAME
+    DmRegisterCommandProcessorEx        @72     NONAME
+    DmStartProfiling                    @73     NONAME
+    DmStopProfiling                     @74     NONAME
+    DmQueryMemoryStatistics             @75     NONAME
+    DmEnableStackTrace                  @76     NONAME
+    DmQueryAllocationTypeName           @77     NONAME
+    DmRegisterAllocationType            @78     NONAME
+    DmInsertAllocationEntry             @79     NONAME
+    DmRemoveAllocationEntry             @80     NONAME
+    DmSetTitleEx                        @81     NONAME
+    DmCaptureStackBackTrace             @82     NONAME
+    DmCrashDump                         @83     NONAME
+    DmIsFastCAPEnabled                  @84     NONAME
+    DmGetFileAccessCount                @85     NONAME
+    LopStartEngine                      @86     NONAME
+    LopStopEngine                       @87     NONAME
+    DmGetUtilityDriveInfo               @88     NONAME

@@ -13,13 +13,15 @@
 #include "Types/Base.h"
 #include "Target/ThreadBase.h"
 
+#include <xboxkrnl/xboxkrnl.h>
+
 namespace ds2 {
 namespace Target {
 
 class Thread : public ds2::Target::ThreadBase {
 protected:
   friend class Process;
-  Thread(Process *process, ThreadId tid, HANDLE handle);
+  Thread(Process *process, ThreadId tid, PETHREAD ethread);
 
 public:
   ~Thread() override;
@@ -35,8 +37,10 @@ public:
   ErrorCode readCPUState(Architecture::CPUState &state) override;
   ErrorCode writeCPUState(Architecture::CPUState const &state) override;
 
+  PETHREAD ethread() const { return _ethread; }
+
 protected:
-  HANDLE _handle;
+  PETHREAD _ethread;
   void updateState() override;
 };
 

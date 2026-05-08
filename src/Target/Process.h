@@ -13,7 +13,9 @@
 #include "Types/Base.h"
 #include "Host/ProcessSpawner.h"
 #include "Target/ProcessBase.h"
-// #include "Target/Xbox/Process.h"
+#include "XboxDmAdapter/Private/XboxDmAdapter.h"
+
+#include <xboxkrnl/xboxkrnl.h>
 
 namespace ds2 {
 namespace Target {
@@ -60,24 +62,91 @@ public:
                                 MemoryRegionInfo &info) override;
 
 protected:
-  HANDLE _handle;
   ErrorCode updateInfo() override;
-
-  struct ThreadEvent {
-    ThreadEvent *next;
-    HANDLE thread;
-    BOOLEAN create;
-  };
-
-  static ThreadEvent *_threadEventList;
-  static HANDLE _threadEventSem;
 
 public:
   static Target::Process *Create(Host::ProcessSpawner &spawner);
   static Target::Process *Attach(ProcessId pid);
-  static void PushThreadEvent(HANDLE thread, BOOLEAN create);
-  static bool PopThreadEvent(HANDLE &thread, BOOLEAN &create);
 
+  // The single in-kernel "process" everyone shares. There is exactly one.
+  static Process *Instance();
+
+  // ---- Kernel-callback entry points (called from XboxDmAdapter) ----
+
+  // Called from DmpTrapHandler. Runs on the trapping thread, in trap context.
+  // Captures the context, queues an event, signals waiters, and (if attached)
+  // BLOCKS the trapping thread until the debugger says continue.
+  // On return, *Context contains any modifications the debugger applied.
+  // Returns TRUE if the trap was consumed (kernel returns to user code with
+  // possibly modified ctx), FALSE to pass through to default handling.
+  BOOLEAN onTrap(PKTRAP_FRAME TrapFrame, PEXCEPTION_RECORD ExceptionRecord,
+                 PCONTEXT Context, BOOLEAN FirstChance);
+
+  // Called from DmpCreateThreadNotifyRoutine. Pushes a ThreadCreate/Exit
+  // event onto the queue.
+  void onThreadEvent(PETHREAD Thread, HANDLE ThreadId, BOOLEAN Create);
+
+  // ---- LLDB session entry points ----
+
+  // Copies the captured context for the currently stopped thread.
+  ErrorCode getCapturedContext(CONTEXT &out);
+
+  // Stages a modified context. Will be applied to the trap on resume.
+  ErrorCode setModifiedContext(CONTEXT const &in);
+
+  // Releases the trap-stopped thread (called by the resume path in the
+  // session). Resumes any threads we suspended for all-stop along the way.
+  void releaseStoppedThread();
+
+  // Marks the debugger as attached. Trap handler short-circuits when not.
+  void setAttached(bool attached) { _attached = attached; }
+  bool attached() const { return _attached; }
+
+protected:
+  // ---- Event queue ----
+  enum class EventKind { Trap, ThreadCreate, ThreadExit, Detach };
+  struct Event {
+    EventKind kind;
+    PETHREAD ethread;
+    HANDLE threadId;
+    DWORD exceptionCode;
+    PVOID exceptionAddr;
+    BOOLEAN firstChance;
+  };
+
+  // Bounded ring so the trap path never allocates. Single producer at any
+  // given moment (Xbox is single-core; the trap handler and the thread-notify
+  // routine cannot truly run concurrently), single consumer (LLDB session).
+  static constexpr size_t kEventQueueSize = 64;
+  Event _events[kEventQueueSize];
+  volatile LONG _eventHead = 0; // consumer
+  volatile LONG _eventTail = 0; // producer
+  KEVENT _eventReady;           // queue non-empty
+  KEVENT _resumeRequested;      // trap thread should resume
+
+  // ---- Stop state ----
+  // No lock needed: while a trap is parked on _resumeRequested, the trap
+  // thread does not touch this state, so the LLDB session is the sole writer.
+  // After _resumeRequested is signalled, the LLDB session is parked in wait()
+  // again, so the trap thread is the sole writer.
+  PETHREAD _stoppedEthread = nullptr;
+  CONTEXT _capturedContext{};
+  CONTEXT _modifiedContext{};
+  BOOLEAN _contextModified = FALSE;
+
+  // For all-stop mode: every other live thread we suspended on stop and must
+  // resume on continue.
+  std::vector<PKTHREAD> _suspendedForStop;
+
+  // Whether a debugger has attached. When false, onTrap returns FALSE
+  // immediately (kernel handles the exception itself).
+  volatile bool _attached = false;
+
+private:
+  bool pushEvent(Event const &e);
+  bool popEvent(Event &out);
+  void suspendOtherThreads(PKTHREAD except);
+  void resumeOtherThreads();
 };
 
 } // namespace Target

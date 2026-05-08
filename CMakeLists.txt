@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 4.0)
 
 set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_LIST_DIR}/external/nxdk/cmake/toolchain.cmake")
 
-set(CMAKE_PROJECT_NAME XboxLldbServer)
+set(CMAKE_PROJECT_NAME XboxDmAdapter)
 
 project(${CMAKE_PROJECT_NAME} C CXX)
 
@@ -13,13 +13,16 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+add_compile_options("-Wno-macro-redefined")
+
 add_subdirectory($ENV{NXDK_DIR} nxdk)
 add_subdirectory(external/JSObjects)
-# add_subdirectory(external/RegsGen2)
-# set(REGS_GEN_)
+add_subdirectory(external/minIni)
 
 add_library(${CMAKE_PROJECT_NAME} SHARED
-    ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
+    # ${CMAKE_CURRENT_LIST_DIR}/XboxDmAdapter.def
+    ${CMAKE_CURRENT_LIST_DIR}/src/XboxDmAdapter/XboxDmAdapter.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/XboxDmAdapter/Memory.cpp
 
     ${CMAKE_CURRENT_LIST_DIR}/src/GDBRemote/Structures.cpp
     ${CMAKE_CURRENT_LIST_DIR}/src/GDBRemote/SlaveSessionImpl.cpp
@@ -71,23 +74,19 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         nxdk_core
         nxdk_net
         jsobjects
+        minIni
 )
 
 target_compile_definitions(${CMAKE_PROJECT_NAME}
     PRIVATE
         _HAS_EXCEPTIONS=0
+        DM_SHARED_LIBRARY=1
 )
-
-add_compile_options("-Wno-macro-redefined")
-
-# target_compile_options(${CMAKE_PROJECT_NAME} 
-#     PUBLIC 
-#         "-Wno-macro-redefined"
-# )
 
 target_link_options(${CMAKE_PROJECT_NAME}
     PRIVATE
-        -ENTRY:DmEntryPoint
+        "-ENTRY:DmEntryPoint"
+        "/DEF:${CMAKE_CURRENT_SOURCE_DIR}/XboxDmAdapterKernel.def"
 )
 
 include(ExternalProject)

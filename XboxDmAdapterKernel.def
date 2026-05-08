@@ -1,0 +1,93 @@
+; This is written for XBDM version 5933, earlier versions may not be compatible
+
+LIBRARY XboxDmAdapter
+
+EXPORTS
+    DmAllocatePool                      @1      
+    DmAllocatePoolWithTag               @2      
+    ; DmCloseCounters                     @3      
+    ; DmCloseLoadedModules                @4      
+    ; DmCloseLoadedModules                @5      
+    ; DmCloseNotificationSession          @6      
+    ; DmClosePerformanceCounter           @7      
+    ; DmContinueThread                    @8      
+    DmFreePool                          @9      
+    ; DmGetMemory                         @10     
+    ; DmGetModuleLongName                 @11     
+    DmGetProcAddress                    @12     
+    ; DmGetThreadContext                  @13     
+    ; DmGetThreadInfo                     @14     
+    ; DmGetThreadList                     @15     
+    ; DmGetXbeInfo                        @16     
+    ; DmGetXboxName                       @17     
+    ; DmGetXtlData                        @18     
+    ; DmGo                                @19     
+    ; DmHaltThread                        @20     
+    ; DmIsDebuggerPresent                 @21     
+    ; DmIsThreadStopped                   @22     
+    ; DmLoadExtension                     @23     
+    ; DmNotify                            @24     
+    ; DmOpenNotificationSession           @25     
+    ; DmOpenPerformanceCounter            @26     
+    ; DmQueryPerformanceCounterHandle     @27     
+    ; DmReboot                            @28     
+    ; NaP                               @29     
+    ; DmRegisterCommandProcessor          @30     
+    ; NaP                               @31     
+    ; DmRegisterNotificationProcessor     @32     
+    DmRegisterPerformanceCounter        @33     
+    ; DmRemoveBreakpoint                  @34     
+    ; DmResumeThread                      @35     
+    ; DmSendNotificationString            @36     
+    ; DmSetBreakpoint                     @37     
+    ; DmSetDataBreakpoint                 @38     
+    ; DmSetInitialBreakpoint              @39     
+    ; DmSetMemory                         @40     
+    ; DmSetThreadContext                  @41     
+    ; DmSetTitle                          @42     
+    ; DmSetXboxName                       @43     
+    ; DmStartProfile                      @44     
+    ; DmStop                              @45     
+    ; DmStopOn                            @46     
+    ; DmStopProfile                       @47     
+    ; DmSuspendThread                     @48     
+    ; DmThreadUserData                    @49     
+    ; DmUnloadExtension                   @50     
+    ; DmWalkLoadedModules                 @51     
+    ; DmWalkModuleSections                @52     
+    ; DmWalkPerformanceCounters           @53     
+    ; GetCurrentThreadId                  @54     
+    DmEnableGPUCounter                  @55     
+    ; DmIsBreakpoint                      @56     
+    ; DmCloseCounters                     @57     
+    ; DmSetUserAccess                     @58     
+    ; DmGetUserAccess                     @59     
+    ; DmWalkUserList                      @60     
+    ; DmAddUser                           @61     
+    ; DmEnableSecurity                    @62     
+    ; DmIsSecurityEnabled                 @63     
+    ; DmRemoveUser                        @64     
+    ; _CAP_Start_Profiling                @65     
+    ; _CAP_End_Profiling                  @66     
+    ; NaP                               @67     
+    ; NaP                               @68     
+    ; NaP                               @69     
+    ; NaP                               @70     
+    ; NaP                               @71     
+    ; DmRegisterCommandProcessorEx        @72     
+    ; DmStartProfiling                    @73     
+    ; DmStopProfiling                     @74     
+    ; DmQueryMemoryStatistics             @75     
+    ; DmEnableStackTrace                  @76     
+    ; DmQueryAllocationTypeName           @77     
+    ; DmRegisterAllocationType            @78     
+    DmInsertAllocationEntry             @79     
+    DmRemoveAllocationEntry             @80     
+    ; DmSetTitleEx                        @81     
+    ; DmCaptureStackBackTrace             @82     
+    ; DmCrashDump                         @83     
+    ; DmIsFastCAPEnabled                  @84     
+    ; DmGetFileAccessCount                @85     
+    ; LopStartEngine                      @86     
+    ; LopStopEngine                       @87     
+    ; DmGetUtilityDriveInfo               @88     
