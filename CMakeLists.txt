@@ -20,7 +20,6 @@ add_subdirectory(external/JSObjects)
 add_subdirectory(external/minIni)
 
 add_library(${CMAKE_PROJECT_NAME} SHARED
-    # ${CMAKE_CURRENT_LIST_DIR}/XboxDmAdapter.def
     ${CMAKE_CURRENT_LIST_DIR}/src/XboxDmAdapter/XboxDmAdapter.cpp
     ${CMAKE_CURRENT_LIST_DIR}/src/XboxDmAdapter/Memory.cpp
 
@@ -64,8 +63,9 @@ add_library(${CMAKE_PROJECT_NAME} SHARED
 )
 
 target_include_directories(${CMAKE_PROJECT_NAME} 
-    PRIVATE
+    PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/include
+    PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}/src
 )
 
