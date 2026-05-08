@@ -1,26 +1,27 @@
 cmake_minimum_required(VERSION 4.0)
 
-if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
-    set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_LIST_DIR}/external/nxdk/cmake/toolchain.cmake")
-endif()
-
 set(XDM_NAME XboxDmAdapter)
 
-if(NOT DEFINED CMAKE_PROJECT_NAME)
-    set(CMAKE_PROJECT_NAME ${XDM_NAME})
+if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+    if(NOT CMAKE_TOOLCHAIN_FILE)
+        set(CMAKE_TOOLCHAIN_FILE
+            "${CMAKE_CURRENT_LIST_DIR}/external/nxdk/cmake/toolchain.cmake"
+            CACHE FILEPATH ""
+        )
+    endif()
+
     project(${XDM_NAME} C CXX)
+else()
+    if(NOT NXDK)
+        add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/lib LibXboxDmAdapter)
+        return()
+    endif()
 endif()
 
-set(CMAKE_SHARED_LIBRARY_SUFFIX ".dll")
-set(CMAKE_SHARED_LIBRARY_PREFIX "")
+if(NOT TARGET nxdk_core)
+    add_subdirectory($ENV{NXDK_DIR} nxdk)
+endif()
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED YES)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-add_compile_options("-Wno-macro-redefined")
-
-add_subdirectory($ENV{NXDK_DIR} nxdk)
 add_subdirectory(external/JSObjects)
 add_subdirectory(external/minIni)
 
@@ -86,6 +87,20 @@ target_compile_definitions(${XDM_NAME}
     PRIVATE
         _HAS_EXCEPTIONS=0
         DM_SHARED_LIBRARY=1
+)
+
+target_compile_options(${XDM_NAME} PRIVATE
+    $<$<CXX_COMPILER_ID:Clang>:-Wno-macro-redefined>
+    $<$<C_COMPILER_ID:Clang>:-Wno-macro-redefined>
+)
+
+set_target_properties(${XDM_NAME} PROPERTIES
+    CXX_STANDARD 20
+    CXX_STANDARD_REQUIRED YES
+    CXX_EXTENSIONS NO
+    CMAKE_EXPORT_COMPILE_COMMANDS ON
+    SUFFIX ".dll"
+    PREFIX ""
 )
 
 target_link_options(${XDM_NAME}
