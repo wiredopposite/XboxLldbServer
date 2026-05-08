@@ -1,10 +1,15 @@
 cmake_minimum_required(VERSION 4.0)
 
-set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_LIST_DIR}/external/nxdk/cmake/toolchain.cmake")
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_LIST_DIR}/external/nxdk/cmake/toolchain.cmake")
+endif()
 
-set(CMAKE_PROJECT_NAME XboxDmAdapter)
+set(XDM_NAME XboxDmAdapter)
 
-project(${CMAKE_PROJECT_NAME} C CXX)
+if(NOT DEFINED CMAKE_PROJECT_NAME)
+    set(CMAKE_PROJECT_NAME ${XDM_NAME})
+    project(${XDM_NAME} C CXX)
+endif()
 
 set(CMAKE_SHARED_LIBRARY_SUFFIX ".dll")
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
@@ -19,7 +24,7 @@ add_subdirectory($ENV{NXDK_DIR} nxdk)
 add_subdirectory(external/JSObjects)
 add_subdirectory(external/minIni)
 
-add_library(${CMAKE_PROJECT_NAME} SHARED
+add_library(${XDM_NAME} SHARED
     ${CMAKE_CURRENT_LIST_DIR}/src/XboxDmAdapter/XboxDmAdapter.cpp
     ${CMAKE_CURRENT_LIST_DIR}/src/XboxDmAdapter/Memory.cpp
 
@@ -62,14 +67,14 @@ add_library(${CMAKE_PROJECT_NAME} SHARED
     ${CMAKE_CURRENT_LIST_DIR}/src/Core/BreakpointManager.cpp
 )
 
-target_include_directories(${CMAKE_PROJECT_NAME} 
+target_include_directories(${XDM_NAME} 
     PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/include
     PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}/src
 )
 
-target_link_libraries(${CMAKE_PROJECT_NAME}
+target_link_libraries(${XDM_NAME}
     PRIVATE
         nxdk_core
         nxdk_net
@@ -77,13 +82,13 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         minIni
 )
 
-target_compile_definitions(${CMAKE_PROJECT_NAME}
+target_compile_definitions(${XDM_NAME}
     PRIVATE
         _HAS_EXCEPTIONS=0
         DM_SHARED_LIBRARY=1
 )
 
-target_link_options(${CMAKE_PROJECT_NAME}
+target_link_options(${XDM_NAME}
     PRIVATE
         "-ENTRY:DmEntryPoint"
         "/DEF:${CMAKE_CURRENT_SOURCE_DIR}/XboxDmAdapterKernel.def"
@@ -128,6 +133,6 @@ add_custom_command(
         -f ${GEN_JSON_INPUT}
 )
 add_custom_target(GenerateX86RegisterDescriptors ALL DEPENDS ${GEN_CPP_OUTPUT})
-add_dependencies(${CMAKE_PROJECT_NAME} GenerateX86RegisterDescriptors)
-target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${GEN_DIR})
-target_sources(${CMAKE_PROJECT_NAME} PRIVATE ${GEN_CPP_OUTPUT})
+add_dependencies(${XDM_NAME} GenerateX86RegisterDescriptors)
+target_include_directories(${XDM_NAME} PRIVATE ${GEN_DIR})
+target_sources(${XDM_NAME} PRIVATE ${GEN_CPP_OUTPUT})
